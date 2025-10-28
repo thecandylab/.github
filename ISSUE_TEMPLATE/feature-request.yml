@@ -1,38 +1,37 @@
-name: Feature Request
-description: "Solicitud de nueva funcionalidad"
-title: "[Feature] "
-labels: ["type:feature"]
+name: "💡 Solicitud de feature"
+description: Propón una mejora o nueva funcionalidad
+title: "[FEAT] "
+labels: ["enhancement"]
 body:
   - type: textarea
-    id: descripcion
+    id: problema
     attributes:
-      label: "🎯 Descripción de la funcionalidad"
-      description: "Describe claramente qué quieres que haga el sistema"
-      placeholder: "Como [rol], quiero [capacidad] para [beneficio]"
+      label: "Problema a resolver"
+      description: "¿Qué necesidad o problema tienes?"
     validations:
       required: true
   - type: textarea
-    id: contexto
+    id: propuesta
     attributes:
-      label: "📖 Contexto adicional"
-      description: "Diseños, referencias, casos de uso, etc."
-  - type: textarea
-    id: criterios
-    attributes:
-      label: "✅ Criterios de aceptación"
-      description: "Lista de condiciones que debe cumplir"
-      placeholder: |
-        - [ ] Dado [contexto], cuando [acción], entonces [resultado]
-        - [ ] Debe soportar [escenario específico]
-        - [ ] No debe afectar [funcionalidad existente]
+      label: "Propuesta"
+      description: "Describe la solución ideal"
     validations:
       required: true
-  - type: dropdown
-    id: prioridad
+  - type: textarea
+    id: alternativas
     attributes:
-      label: "📊 Prioridad"
+      label: "Alternativas consideradas"
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: "Áreas afectadas"
       options:
-        - "prio:P0 - Crítico"
-        - "prio:P1 - Alto"
-        - "prio:P2 - Medio"
-        - "prio:P3 - Bajo"
+        - label: Frontend
+        - label: Backend
+        - label: Infra/DevOps
+        - label: Docs
+  - type: input
+    id: impacto
+    attributes:
+      label: "Impacto esperado (métrica si es posible)"
+      placeholder: "p. ej. -20% tiempo de carga"
