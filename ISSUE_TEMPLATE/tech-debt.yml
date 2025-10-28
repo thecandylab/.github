@@ -1,0 +1,29 @@
+name: Tech Debt
+description: "Refactorización o mejora técnica"
+title: "[Tech Debt] "
+labels: ["type:refactor"]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "🔧 Descripción de la deuda técnica"
+      description: "Qué problema técnico queremos resolver"
+    validations:
+      required: true
+  - type: textarea
+    id: beneficio
+    attributes:
+      label: "🎯 Beneficio esperado"
+      description: "Cómo mejorará el código, rendimiento, mantenibilidad, etc."
+  - type: dropdown
+    id: area
+    attributes:
+      label: "🎯 Área"
+      multiple: true
+      options:
+        - "area:frontend"
+        - "area:backend"
+        - "area:db"
+        - "area:infrastructure"
+        - "area:devops"
+        - "area:dependencies"

@@ -1,0 +1,38 @@
+name: Feature Request
+description: "Solicitud de nueva funcionalidad"
+title: "[Feature] "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "🎯 Descripción de la funcionalidad"
+      description: "Describe claramente qué quieres que haga el sistema"
+      placeholder: "Como [rol], quiero [capacidad] para [beneficio]"
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: "📖 Contexto adicional"
+      description: "Diseños, referencias, casos de uso, etc."
+  - type: textarea
+    id: criterios
+    attributes:
+      label: "✅ Criterios de aceptación"
+      description: "Lista de condiciones que debe cumplir"
+      placeholder: |
+        - [ ] Dado [contexto], cuando [acción], entonces [resultado]
+        - [ ] Debe soportar [escenario específico]
+        - [ ] No debe afectar [funcionalidad existente]
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: "📊 Prioridad"
+      options:
+        - "prio:P0 - Crítico"
+        - "prio:P1 - Alto"
+        - "prio:P2 - Medio"
+        - "prio:P3 - Bajo"

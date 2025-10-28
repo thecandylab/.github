@@ -1,0 +1,49 @@
+name: Bug Report
+description: "Reporte de error o comportamiento inesperado"
+title: "[Bug] "
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "📝 Descripción"
+      description: "¿Qué pasó y qué esperabas que pasara?"
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: "🔍 Pasos para reproducir"
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer click en '....'
+        3. Scroll hasta '....'
+        4. Ver error
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: "🖥️ Entorno"
+      placeholder: "Ej: Windows 11, Chrome 120, versión 1.5.0"
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: "🚨 Severidad"
+      options:
+        - "S1-Crítico - Bloquea producción"
+        - "S2-Alto - Funcionalidad importante afectada"
+        - "S3-Medio - Funcionalidad parcial afectada"
+        - "S4-Bajo - Molesto pero funcional"
+  - type: dropdown
+    id: area
+    attributes:
+      label: "🎯 Área"
+      multiple: true
+      options:
+        - "area:frontend"
+        - "area:backend"
+        - "area:db"
+        - "area:infrastructure"
+        - "area:devops"
+        - "area:dependencies"

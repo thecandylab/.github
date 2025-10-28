@@ -1,0 +1,22 @@
+name: Epic
+description: "Conjunto de funcionalidades relacionadas"
+title: "[Epic] "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "🎯 Descripción de la épica"
+      description: "Objetivo general y alcance"
+    validations:
+      required: true
+  - type: textarea
+    id: historias
+    attributes:
+      label: "📋 Historias/tareas relacionadas"
+      description: "Lista de issues o funcionalidades incluidas"
+      placeholder: |
+        - [ ] #123 - Funcionalidad A
+        - [ ] #124 - Funcionalidad B
+        - [ ] Tarea técnica X
+
