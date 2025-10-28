@@ -1,11 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 📚 Documentación de TheCandyLab
-    url: https://github.com/thecandylab
-    about: "Visita nuestra organización"
-  - name: 💬 Soporte y Discusiones
-    url: https://github.com/orgs/thecandylab/discussions
-    about: "Preguntas y ayuda con los templates"
-  - name: 🐛 Reportar Problema con Templates
-    url: https://github.com/thecandylab/.github/issues
-    about: "Reporta problemas con los templates de issues"
+  - name: 📚 Documentación
+    url: https://example.com/docs
+    about: Revisa antes de abrir un issue
+  - name: 💬 Discusiones
+    url: https://github.com/<tu-org-o-usuario>/<repo>/discussions
+    about: Para preguntas generales o ideas abiertas
