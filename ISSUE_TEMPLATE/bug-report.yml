@@ -1,49 +1,51 @@
-name: Bug Report
-description: "Reporte de error o comportamiento inesperado"
-title: "[Bug] "
-labels: ["type:bug"]
+name: "🐞 Reporte de bug"
+description: Informa de un error inesperado
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
 body:
-  - type: textarea
-    id: descripcion
+  - type: markdown
     attributes:
-      label: "📝 Descripción"
-      description: "¿Qué pasó y qué esperabas que pasara?"
-    validations:
-      required: true
-  - type: textarea
-    id: pasos
-    attributes:
-      label: "🔍 Pasos para reproducir"
-      placeholder: |
-        1. Ir a '...'
-        2. Hacer click en '....'
-        3. Scroll hasta '....'
-        4. Ver error
-    validations:
-      required: true
+      value: "Gracias por reportar. Completa la info para que podamos reproducir."
   - type: input
-    id: entorno
+    id: version
     attributes:
-      label: "🖥️ Entorno"
-      placeholder: "Ej: Windows 11, Chrome 120, versión 1.5.0"
+      label: "Versión / commit"
+      placeholder: "v1.2.3 o SHA"
+  - type: textarea
+    id: expected
+    attributes:
+      label: "¿Qué esperabas que ocurriera?"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "¿Qué ocurrió realmente?"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Pasos para reproducir"
+      description: "Enumera los pasos exactos"
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
   - type: dropdown
-    id: severidad
+    id: severity
     attributes:
-      label: "🚨 Severidad"
+      label: "Severidad"
       options:
-        - "S1-Crítico - Bloquea producción"
-        - "S2-Alto - Funcionalidad importante afectada"
-        - "S3-Medio - Funcionalidad parcial afectada"
-        - "S4-Bajo - Molesto pero funcional"
-  - type: dropdown
-    id: area
+        - baja
+        - media
+        - alta
+        - crítica
+  - type: textarea
+    id: logs
     attributes:
-      label: "🎯 Área"
-      multiple: true
-      options:
-        - "area:frontend"
-        - "area:backend"
-        - "area:db"
-        - "area:infrastructure"
-        - "area:devops"
-        - "area:dependencies"
+      label: "Logs / stacktrace / capturas"
+      render: shell
