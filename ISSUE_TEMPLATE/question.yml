@@ -1,0 +1,17 @@
+name: "❓ Pregunta / Soporte"
+description: Dudas, preguntas de uso, o soporte
+title: "[Q] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: "Contexto"
+      description: "¿Qué intentas hacer?"
+    validations:
+      required: true
+  - type: textarea
+    id: detalles
+    attributes:
+      label: "Detalles"
+      description: "Incluye comandos, snippets o enlaces"
