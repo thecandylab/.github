@@ -7,7 +7,7 @@ Apreciamos tu ayuda para mantener nuestros proyectos seguros. Si descubres una v
 ### Cómo Reportar
 
 1. **NO** crees un issue público
-2. Envía un email a: security@tu-organizacion.com
+2. Envía un email a: security@thecandylab.com
 3. Incluye:
    - Descripción detallada de la vulnerabilidad
    - Pasos para reproducir
@@ -97,8 +97,9 @@ Nos comprometemos a:
 
 ## 📞 Contacto
 
-- Email de seguridad: security@tu-organizacion.com
-- GPG Key: [Enlace a clave pública]
+- Email de seguridad: security@thecandylab.com
+- PG Key: [Enlace a clave pública]
+- Organización: [TheCandyLab](https://github.com/thecandylab)
 
 ---
 

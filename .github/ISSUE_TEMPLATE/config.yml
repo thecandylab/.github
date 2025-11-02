@@ -2,11 +2,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 Discusiones
-    url: https://github.com/orgs/YOUR_ORG/discussions
+    url: https://github.com/orgs/thecandylab/discussions
     about: Para preguntas generales y discusiones
   - name: 📚 Documentación
-    url: https://docs.your-org.com
+    url: https://thecandylab.com
     about: Consulta nuestra documentación
   - name: 🔒 Reporte de Seguridad
-    url: https://github.com/YOUR_ORG/.github/security/policy
+    url: https://github.com/thecandylab/.github/security/policy
     about: Para reportar vulnerabilidades de seguridad de forma privada
