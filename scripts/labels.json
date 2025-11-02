@@ -1,0 +1,137 @@
+[
+	{
+		"name": "area:frontend",
+		"color": "1971C2",
+		"description": "Cambios en Angular/UI"
+	},
+	{
+		"name": "area:backend",
+		"color": "099268",
+		"description": "Cambios en Spring/API"
+	},
+	{
+		"name": "area:db",
+		"color": "F08C00",
+		"description": "Cambios en base de datos"
+	},
+	{
+		"name": "area:infrastructure",
+		"color": "FF8787",
+		"description": "Docker, servidores, redes"
+	},
+	{
+		"name": "area:devops",
+		"color": "63E6BE",
+		"description": "CI/CD, despliegues"
+	},
+	{
+		"name": "area:dependencies",
+		"color": "B197FC",
+		"description": "Actualizaciones de librerías"
+	},
+	{
+		"name": "category:archetype",
+		"color": "FF6B00",
+		"description": "Repositorios de plantillas y código base"
+	},
+	{
+		"name": "prio:P0",
+		"color": "FA5252",
+		"description": "Crítico - Bloquea producción"
+	},
+	{
+		"name": "prio:P1",
+		"color": "FF922B",
+		"description": "Alto - Funcionalidad importante"
+	},
+	{
+		"name": "prio:P2",
+		"color": "FCC419",
+		"description": "Medio - Mejora valorada"
+	},
+	{
+		"name": "prio:P3",
+		"color": "74C0FC",
+		"description": "Bajo - Si sobra tiempo"
+	},
+	{
+		"name": "status:blocked",
+		"color": "868E96",
+		"description": "Bloqueado por dependencia externa"
+	},
+	{
+		"name": "status:in-review",
+		"color": "FFD43B",
+		"description": "Esperando revisión de código"
+	},
+	{
+		"name": "status:testing",
+		"color": "A9E34B",
+		"description": "En fase de testing/QA"
+	},
+	{
+		"name": "status:wontfix",
+		"color": "868E96",
+		"description": "No se va a resolver"
+	},
+	{
+		"name": "status:duplicate",
+		"color": "ADB5BD",
+		"description": "Issue duplicado"
+	},
+	{
+		"name": "type:feature",
+		"color": "228BE6",
+		"description": "Nuevas funcionalidades"
+	},
+	{
+		"name": "type:bug",
+		"color": "E03131",
+		"description": "Corrección de errores"
+	},
+	{
+		"name": "type:chore",
+		"color": "495057",
+		"description": "Tareas de mantenimiento"
+	},
+	{
+		"name": "type:security",
+		"color": "FF6B6B",
+		"description": "Parches de seguridad y vulnerabilidades"
+	},
+	{
+		"name": "type:refactor",
+		"color": "9775FA",
+		"description": "Refactorizaciones de código sin cambiar funcionalidad"
+	},
+	{
+		"name": "type:docs",
+		"color": "20C997",
+		"description": "Cambios en documentación"
+	},
+	{
+		"name": "type:performance",
+		"color": "FFA94D",
+		"description": "Mejoras de rendimiento"
+	},
+	{
+		"name": "Epic",
+		"color": "7950F2",
+		"description": "Conjunto de funcionalidades relacionadas"
+	},
+	{
+		"name": "User Story",
+		"color": "40C057",
+		"description": "Historia de usuario"
+	},
+	{
+		"name": "Task",
+		"color": "868E96",
+		"description": "Tarea técnica"
+	},
+	{
+		"name": "Tech Debt",
+		"color": "E67700",
+		"description": "Deuda técnica"
+	}
+]

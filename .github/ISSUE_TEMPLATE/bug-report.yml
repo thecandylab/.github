@@ -1,0 +1,98 @@
+name: 🐛 Bug Report
+description: Reporte de error o comportamiento inesperado
+title: "[BUG] "
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar este error. Por favor, proporciona toda la información posible para ayudarnos a reproducir y solucionar el problema.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del Bug
+      description: Una descripción clara y concisa del error
+      placeholder: "Cuando intento..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para Reproducir
+      description: Pasos detallados para reproducir el comportamiento
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer click en '...'
+        3. Desplazarse hasta '...'
+        4. Ver el error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento Esperado
+      description: ¿Qué esperabas que sucediera?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamiento Actual
+      description: ¿Qué sucedió en realidad?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área Afectada
+      description: ¿En qué área del sistema ocurre el error?
+      options:
+        - Frontend (Angular/UI)
+        - Backend (Spring/API)
+        - Base de Datos
+        - Infraestructura
+        - DevOps/CI-CD
+        - Dependencias
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      description: ¿Qué tan crítico es este bug?
+      options:
+        - P0 - Crítico (Bloquea producción)
+        - P1 - Alto (Funcionalidad importante afectada)
+        - P2 - Medio (Problema molesto pero con workaround)
+        - P3 - Bajo (Problema menor)
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno
+      description: Información sobre el entorno donde ocurre el error
+      placeholder: |
+        - OS: [ej. Windows 11, macOS 13.0]
+        - Navegador: [ej. Chrome 120, Firefox 121]
+        - Versión de la aplicación: [ej. 1.2.3]
+        - Ambiente: [ej. Producción, Staging, Local]
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de Pantalla / Logs
+      description: Si es aplicable, adjunta capturas de pantalla o logs relevantes
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Información Adicional
+      description: Cualquier otra información que pueda ser útil

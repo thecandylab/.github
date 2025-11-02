@@ -1,0 +1,109 @@
+name: 👤 User Story
+description: Nueva funcionalidad orientada al usuario
+title: "[STORY] Como [rol], quiero [funcionalidad] para [beneficio]"
+labels: ["User Story", "type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Una User Story describe una funcionalidad desde la perspectiva del usuario final.
+
+  - type: textarea
+    id: story
+    attributes:
+      label: Historia de Usuario
+      description: Completa la historia siguiendo el formato estándar
+      placeholder: |
+        Como [tipo de usuario]
+        Quiero [realizar alguna acción]
+        Para [obtener algún beneficio/valor]
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Contexto
+      description: Proporciona contexto adicional sobre por qué se necesita esta funcionalidad
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Criterios de Aceptación
+      description: Define las condiciones específicas que deben cumplirse
+      placeholder: |
+        **Dado** que estoy en la página de inicio
+        **Cuando** hago click en el botón de login
+        **Entonces** veo el formulario de autenticación
+        
+        - [ ] El usuario puede...
+        - [ ] El sistema valida que...
+        - [ ] Se muestra un mensaje cuando...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Tipo de Usuario
+      description: ¿A qué tipo de usuario está dirigida esta historia?
+      options:
+        - Usuario Final
+        - Administrador
+        - Usuario Premium
+        - Usuario Invitado
+        - Desarrollador
+        - Todos los usuarios
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área Principal
+      description: ¿En qué área se implementará principalmente?
+      options:
+        - Frontend (Angular/UI)
+        - Backend (Spring/API)
+        - Base de Datos
+        - Múltiples áreas
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad de Negocio
+      options:
+        - P0 - Crítico (Must Have)
+        - P1 - Alto (Should Have)
+        - P2 - Medio (Could Have)
+        - P3 - Bajo (Nice to Have)
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Diseño / Mockups
+      description: Adjunta enlaces a diseños, mockups o wireframes si están disponibles
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Notas Técnicas
+      description: Consideraciones técnicas o restricciones conocidas
+
+  - type: input
+    id: story-points
+    attributes:
+      label: Estimación (Story Points)
+      description: Estimación inicial en story points (1, 2, 3, 5, 8, 13)
+      placeholder: "5"
+
+  - type: input
+    id: epic-link
+    attributes:
+      label: Epic Relacionado
+      description: Si esta historia es parte de un Epic, proporciona el enlace o ID
+      placeholder: "#123"

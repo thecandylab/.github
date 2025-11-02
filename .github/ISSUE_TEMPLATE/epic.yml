@@ -1,0 +1,103 @@
+name: 🎯 Epic
+description: Conjunto de funcionalidades relacionadas
+title: "[EPIC] "
+labels: ["Epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Un Epic agrupa varias funcionalidades relacionadas que juntas entregan valor significativo al usuario.
+
+  - type: input
+    id: title
+    attributes:
+      label: Título del Epic
+      description: Un título descriptivo para el Epic
+      placeholder: "Sistema de Autenticación Multifactor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: Describe el objetivo general y el valor que aporta este Epic
+      placeholder: "Este epic abarca todas las funcionalidades necesarias para..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Valor de Negocio
+      description: ¿Qué valor aporta este Epic al negocio o usuarios?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance
+      description: Define qué está incluido y qué NO está incluido en este Epic
+      placeholder: |
+        **Incluido:**
+        - Funcionalidad A
+        - Funcionalidad B
+        
+        **No incluido:**
+        - Funcionalidad X (será parte de otro Epic)
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories / Features
+      description: Lista las historias de usuario o features que componen este Epic
+      placeholder: |
+        - [ ] Como usuario, quiero poder...
+        - [ ] Como administrador, necesito...
+        - [ ] El sistema debe permitir...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Áreas Impactadas
+      description: Selecciona todas las áreas que se verán afectadas
+      multiple: true
+      options:
+        - Frontend (Angular/UI)
+        - Backend (Spring/API)
+        - Base de Datos
+        - Infraestructura
+        - DevOps/CI-CD
+        - Documentación
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias
+      description: ¿Este Epic depende de otros Epics o sistemas externos?
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Riesgos
+      description: Identifica posibles riesgos o desafíos técnicos
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: Métricas de Éxito
+      description: ¿Cómo mediremos el éxito de este Epic?
+      placeholder: |
+        - Reducción del 50% en tickets de soporte relacionados
+        - Incremento del 30% en la satisfacción del usuario
+        - Tiempo de procesamiento reducido en 70%
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline Estimado
+      description: Estimación aproximada de duración
+      placeholder: "3-4 sprints"

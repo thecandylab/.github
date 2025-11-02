@@ -1,0 +1,108 @@
+name: 📋 Task
+description: Tarea técnica específica
+title: "[TASK] "
+labels: ["Task", "type:chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Una tarea técnica que no necesariamente aporta valor directo al usuario, pero es necesaria para el proyecto.
+
+  - type: input
+    id: title
+    attributes:
+      label: Título de la Tarea
+      description: Un título descriptivo y conciso
+      placeholder: "Configurar pipeline de CI/CD para el microservicio de autenticación"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: Describe en detalle qué se necesita hacer
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Tipo de Tarea
+      options:
+        - Configuración
+        - Investigación
+        - Actualización de Dependencias
+        - Migración
+        - Optimización
+        - Documentación
+        - Testing
+        - Deployment
+        - Monitoreo
+        - Otro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      description: ¿En qué área del sistema se realizará la tarea?
+      options:
+        - Frontend (Angular/UI)
+        - Backend (Spring/API)
+        - Base de Datos
+        - Infraestructura
+        - DevOps/CI-CD
+        - Documentación
+        - Testing
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Criterios de Completitud
+      description: ¿Qué debe cumplirse para considerar esta tarea como completa?
+      placeholder: |
+        - [ ] Pipeline configurado y funcionando
+        - [ ] Tests automatizados ejecutándose
+        - [ ] Documentación actualizada
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Detalles Técnicos
+      description: Información técnica relevante, comandos, configuraciones, etc.
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias
+      description: ¿Esta tarea depende de otras tareas o sistemas?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      options:
+        - P0 - Crítico (Bloquea otras tareas)
+        - P1 - Alto (Necesario pronto)
+        - P2 - Medio (Importante pero no urgente)
+        - P3 - Bajo (Cuando haya tiempo)
+
+  - type: input
+    id: estimated-hours
+    attributes:
+      label: Estimación (horas)
+      description: Tiempo estimado para completar la tarea
+      placeholder: "4"
+
+  - type: input
+    id: related-issue
+    attributes:
+      label: Issue Relacionado
+      description: Si esta tarea está relacionada con otro issue
+      placeholder: "#456"

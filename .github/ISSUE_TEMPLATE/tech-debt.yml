@@ -1,0 +1,122 @@
+name: 🔧 Tech Debt
+description: Refactorización o mejora técnica
+title: "[TECH DEBT] "
+labels: ["Tech Debt", "type:refactor"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Documenta deuda técnica que necesita ser abordada para mejorar la calidad del código o la arquitectura.
+
+  - type: input
+    id: title
+    attributes:
+      label: Título
+      description: Un título descriptivo de la deuda técnica
+      placeholder: "Refactorizar el módulo de autenticación para usar JWT"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Estado Actual
+      description: Describe el problema actual y por qué es deuda técnica
+      placeholder: |
+        - El código actual usa sesiones en memoria
+        - No es escalable horizontalmente
+        - Dificulta la implementación de microservicios
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Solución Propuesta
+      description: Describe cómo se debería refactorizar o mejorar
+    validations:
+      required: true
+
+  - type: dropdown
+    id: debt-type
+    attributes:
+      label: Tipo de Deuda Técnica
+      options:
+        - Código duplicado
+        - Arquitectura obsoleta
+        - Dependencias desactualizadas
+        - Falta de tests
+        - Performance
+        - Seguridad
+        - Documentación faltante
+        - Código legacy
+        - Acoplamiento alto
+        - Otro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área Afectada
+      options:
+        - Frontend (Angular/UI)
+        - Backend (Spring/API)
+        - Base de Datos
+        - Infraestructura
+        - DevOps/CI-CD
+        - Múltiples áreas
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto de NO Resolver
+      description: ¿Qué problemas causará si no se aborda esta deuda técnica?
+      placeholder: |
+        - Incremento en tiempo de desarrollo de nuevas features
+        - Mayor probabilidad de bugs
+        - Dificultad para escalar
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Beneficios de Resolver
+      description: ¿Qué mejoras se obtendrán al resolver esta deuda?
+      placeholder: |
+        - Reducción del 50% en tiempo de despliegue
+        - Mejor mantenibilidad del código
+        - Posibilidad de escalar horizontalmente
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      description: Basada en el impacto y urgencia
+      options:
+        - P0 - Crítico (Riesgo de seguridad o falla mayor)
+        - P1 - Alto (Impacta significativamente el desarrollo)
+        - P2 - Medio (Importante pero manejable)
+        - P3 - Bajo (Mejora menor)
+
+  - type: input
+    id: effort
+    attributes:
+      label: Esfuerzo Estimado
+      description: Estimación en días-persona
+      placeholder: "5 días"
+
+  - type: textarea
+    id: migration-plan
+    attributes:
+      label: Plan de Migración
+      description: Si aplica, describe cómo se migrará del estado actual al deseado
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Riesgos
+      description: Riesgos asociados con la refactorización

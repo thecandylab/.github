@@ -1,5 +1,12 @@
+# Configuración de las plantillas de issues
 blank_issues_enabled: false
 contact_links:
-  - name: Preguntas generales / soporte interno
-    url: https://intranet.example.com/soporte
-    about: Usa este canal para dudas no relacionadas con bugs/funcionalidades.
+  - name: 💬 Discusiones
+    url: https://github.com/orgs/YOUR_ORG/discussions
+    about: Para preguntas generales y discusiones
+  - name: 📚 Documentación
+    url: https://docs.your-org.com
+    about: Consulta nuestra documentación
+  - name: 🔒 Reporte de Seguridad
+    url: https://github.com/YOUR_ORG/.github/security/policy
+    about: Para reportar vulnerabilidades de seguridad de forma privada
