@@ -1,0 +1,30 @@
+# .github/security.yml
+version: "1.0"
+security:
+  enabled: true
+  contact:
+    email: "security@thecandylab.com"
+    url: "https://github.com/thecandylab/.github/security/policy"
+
+  reporting:
+    preferred: "security_advisories"
+    alternatives:
+      - "email"
+
+  acknowledgements:
+    enabled: true
+    style: "in_release_notes"
+
+  bounty:
+    enabled: true
+    url: "https://github.com/thecandylab/.github/blob/main/SECURITY.md"
+
+  supported_versions:
+    - ">= 1.0.0"
+    - "0.8.x"
+    - "0.9.x"
+
+  response_time:
+    initial: "24 hours"
+    update: "1 week"
+    critical: "12 hours"

@@ -49,13 +49,12 @@ body:
       label: Área
       description: ¿En qué área del sistema se realizará la tarea?
       options:
-        - Frontend (Angular/UI)
-        - Backend (Spring/API)
-        - Base de Datos
-        - Infraestructura
-        - DevOps/CI-CD
-        - Documentación
-        - Testing
+        - area:frontend
+        - area:backend
+        - area:db
+        - area:infrastructure
+        - area:devops
+        - area:dependencies
     validations:
       required: true
 
@@ -88,10 +87,12 @@ body:
     attributes:
       label: Prioridad
       options:
-        - P0 - Crítico (Bloquea otras tareas)
-        - P1 - Alto (Necesario pronto)
-        - P2 - Medio (Importante pero no urgente)
-        - P3 - Bajo (Cuando haya tiempo)
+        - prio:P0
+        - prio:P1
+        - prio:P2
+        - prio:P3
+    validations:
+      required: true
 
   - type: input
     id: estimated-hours

@@ -1,0 +1,75 @@
+name: "✨ Feature Request"
+description: "Sugerir una nueva funcionalidad o mejora"
+labels: ["type:feature", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Nueva Funcionalidad
+        Describe la funcionalidad que te gustaría ver implementada.
+
+  - type: input
+    id: issue-id
+    attributes:
+      label: "ID del Issue"
+      description: "Ejemplo: TCL-001 (dejar en blanco si es nuevo)"
+      placeholder: "TCL-XXX"
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problema relacionado"
+      description: "¿Hay un problema específico que esta feature resolvería?"
+      placeholder: "Estoy frustrado cuando..."
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Solución deseada"
+      description: "Describe qué te gustaría que ocurriera"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternativas consideradas"
+      description: "¿Has considerado alguna solución alternativa?"
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Área Afectada"
+      options:
+        - area:frontend
+        - area:backend
+        - area:db
+        - area:infrastructure
+        - area:devops
+        - area:dependencies
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridad"
+      options:
+        - prio:P0
+        - prio:P1
+        - prio:P2
+        - prio:P3
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Confirmaciones"
+      options:
+        - label: "He verificado que esta feature no existe ya"
+          required: true
+        - label: "Estoy dispuesto a ayudar en la implementación si es posible"
+          required: false

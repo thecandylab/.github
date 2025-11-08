@@ -43,7 +43,7 @@ body:
         **Incluido:**
         - Funcionalidad A
         - Funcionalidad B
-        
+
         **No incluido:**
         - Funcionalidad X (será parte de otro Epic)
 
@@ -66,12 +66,12 @@ body:
       description: Selecciona todas las áreas que se verán afectadas
       multiple: true
       options:
-        - Frontend (Angular/UI)
-        - Backend (Spring/API)
-        - Base de Datos
-        - Infraestructura
-        - DevOps/CI-CD
-        - Documentación
+        - area:frontend
+        - area:backend
+        - area:db
+        - area:infrastructure
+        - area:devops
+        - area:dependencies
 
   - type: textarea
     id: dependencies

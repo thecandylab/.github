@@ -4,9 +4,12 @@ contact_links:
   - name: 💬 Discusiones
     url: https://github.com/orgs/thecandylab/discussions
     about: Para preguntas generales y discusiones
-  - name: 📚 Documentación
-    url: https://thecandylab.com
-    about: Consulta nuestra documentación
-  - name: 🔒 Reporte de Seguridad
-    url: https://github.com/thecandylab/.github/security/policy
+  - name: 📚 Consultar documentación
+    url: https://github.com/thecandylab/.github
+    about: Revisa la documentación antes de crear un issue
+  - name: 🛡️ Reporte de Seguridad
+    url: https://github.com/thecandylab/.github/security/advisories/new
     about: Para reportar vulnerabilidades de seguridad de forma privada
+  - name: 🤔 ¿Necesitas ayuda con tu PR?
+    url: https://github.com/thecandylab/.github/blob/main/README.md
+    about: Revisa nuestra guía de contribución

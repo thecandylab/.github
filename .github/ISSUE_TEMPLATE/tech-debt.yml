@@ -60,12 +60,12 @@ body:
     attributes:
       label: Área Afectada
       options:
-        - Frontend (Angular/UI)
-        - Backend (Spring/API)
-        - Base de Datos
-        - Infraestructura
-        - DevOps/CI-CD
-        - Múltiples áreas
+        - area:frontend
+        - area:backend
+        - area:db
+        - area:infrastructure
+        - area:devops
+        - area:dependencies
     validations:
       required: true
 
@@ -97,10 +97,12 @@ body:
       label: Prioridad
       description: Basada en el impacto y urgencia
       options:
-        - P0 - Crítico (Riesgo de seguridad o falla mayor)
-        - P1 - Alto (Impacta significativamente el desarrollo)
-        - P2 - Medio (Importante pero manejable)
-        - P3 - Bajo (Mejora menor)
+        - prio:P0
+        - prio:P1
+        - prio:P2
+        - prio:P3
+    validations:
+      required: true
 
   - type: input
     id: effort

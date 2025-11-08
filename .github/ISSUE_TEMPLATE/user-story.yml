@@ -37,7 +37,7 @@ body:
         **Dado** que estoy en la página de inicio
         **Cuando** hago click en el botón de login
         **Entonces** veo el formulario de autenticación
-        
+
         - [ ] El usuario puede...
         - [ ] El sistema valida que...
         - [ ] Se muestra un mensaje cuando...
@@ -65,10 +65,11 @@ body:
       label: Área Principal
       description: ¿En qué área se implementará principalmente?
       options:
-        - Frontend (Angular/UI)
-        - Backend (Spring/API)
-        - Base de Datos
-        - Múltiples áreas
+        - area:frontend
+        - area:backend
+        - area:db
+        - area:infrastructure
+        - area:devops
     validations:
       required: true
 
@@ -77,10 +78,10 @@ body:
     attributes:
       label: Prioridad de Negocio
       options:
-        - P0 - Crítico (Must Have)
-        - P1 - Alto (Should Have)
-        - P2 - Medio (Could Have)
-        - P3 - Bajo (Nice to Have)
+        - prio:P0
+        - prio:P1
+        - prio:P2
+        - prio:P3
 
   - type: textarea
     id: design

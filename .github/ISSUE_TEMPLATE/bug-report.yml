@@ -52,12 +52,12 @@ body:
       label: Área Afectada
       description: ¿En qué área del sistema ocurre el error?
       options:
-        - Frontend (Angular/UI)
-        - Backend (Spring/API)
-        - Base de Datos
-        - Infraestructura
-        - DevOps/CI-CD
-        - Dependencias
+        - area:frontend
+        - area:backend
+        - area:db
+        - area:infrastructure
+        - area:devops
+        - area:dependencies
     validations:
       required: true
 
@@ -67,10 +67,10 @@ body:
       label: Prioridad
       description: ¿Qué tan crítico es este bug?
       options:
-        - P0 - Crítico (Bloquea producción)
-        - P1 - Alto (Funcionalidad importante afectada)
-        - P2 - Medio (Problema molesto pero con workaround)
-        - P3 - Bajo (Problema menor)
+        - prio:P0
+        - prio:P1
+        - prio:P2
+        - prio:P3
     validations:
       required: true
 
