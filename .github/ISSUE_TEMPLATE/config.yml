@@ -8,7 +8,7 @@ contact_links:
     url: https://github.com/thecandylab/.github
     about: Revisa la documentación antes de crear un issue
   - name: 🛡️ Reporte de Seguridad
-    url: https://github.com/thecandylab/.github/security/advisories/new
+    url: https://github.com/thecandylab/.github/blob/main/SECURITY.md
     about: Para reportar vulnerabilidades de seguridad de forma privada
   - name: 🤔 ¿Necesitas ayuda con tu PR?
     url: https://github.com/thecandylab/.github/blob/main/README.md
