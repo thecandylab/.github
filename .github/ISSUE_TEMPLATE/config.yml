@@ -4,6 +4,8 @@ contact_links:
   - name: 🛡️ Reporte de Seguridad
     url: https://github.com/thecandylab/.github/security/advisories/new
     about: Para TODAS las vulnerabilidades - Sistema privado y seguro
+  - name: 📋 Instrucciones y Recompensas
+    url: https://github.com/thecandylab/.github/blob/main/.github/security/INSTRUCCIONES-SEGURIDAD.md
   - name: 💬 Discusiones
     url: https://github.com/orgs/thecandylab/discussions
     about: Para preguntas generales y discusiones
