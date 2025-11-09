@@ -10,6 +10,15 @@
 
 *Este enlace crea un advisory privado solo visible para mantenedores*
 
+### Para vulnerabilidades CRÍTICAS (P0/P1):
+👉 **[Report a security vulnerability](https://github.com/thecandylab/.github/security/advisories/new)**
+
+*Crea un advisory privado solo para mantenedores*
+
+### Para vulnerabilidades MEDIAS/BAJAS (P2/P3):
+👉 **Usa la plantilla "🛡️ Reporte de Seguridad"** en la página de issues
+
+
 ### ⚠️ Por favor NO uses:
 - ❌ "Open a blank issue" 
 - ❌ Issues públicos

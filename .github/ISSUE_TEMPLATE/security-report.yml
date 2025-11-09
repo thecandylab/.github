@@ -1,0 +1,85 @@
+# .github/ISSUE_TEMPLATE/security-report.yml
+name: "🛡️ Reporte de Seguridad"
+description: "Reportar vulnerabilidad de seguridad (PRIVADO)"
+title: "[SECURITY] "
+labels: ["type:security", "prio:P0"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔒 Reporte Confidencial de Seguridad
+
+        **⚠️ IMPORTANTE:** Este reporte será privado y solo visible para mantenedores.
+
+        **Para vulnerabilidades CRÍTICAS**, usa: https://github.com/thecandylab/.github/security/advisories/new
+
+  - type: input
+    id: title
+    attributes:
+      label: "Título de la Vulnerabilidad"
+      description: "Descripción concisa del problema"
+      placeholder: "Ej: XSS en formulario de contacto"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Nivel de Severidad"
+      options:
+        - "🔴 P0 - Crítico (RCE, bypass auth, datos sensibles)"
+        - "🟠 P1 - Alto (Escalación privilegios)"
+        - "🟡 P2 - Medio (Impacto limitado)"
+        - "🟢 P3 - Bajo (Mejora de seguridad)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Área Afectada"
+      options:
+        - "area:frontend"
+        - "area:backend"
+        - "area:db"
+        - "area:infrastructure"
+        - "area:devops"
+        - "area:dependencies"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descripción Detallada"
+      description: "Explica la vulnerabilidad técnicamente"
+      placeholder: "La vulnerabilidad permite... Se encuentra en... El impacto es..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Pasos para Reproducir"
+      description: "Instrucciones paso a paso para replicar el issue"
+      placeholder: "1. Ir a...\n2. Hacer click en...\n3. Introducir...\n4. Observar..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impacto Potencial"
+      description: "Qué podría hacer un atacante explotando esto"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Confirmaciones"
+      options:
+        - label: "Acepto no divulgar públicamente esta vulnerabilidad hasta que sea parcheada"
+          required: true
+        - label: "Para vulnerabilidades P0/P1, usaré Security Advisories en lugar de esta plantilla"
+          required: false
