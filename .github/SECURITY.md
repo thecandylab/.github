@@ -2,6 +2,25 @@
 
 ## 🚨 Reportar una Vulnerabilidad
 
+
+
+**Utiliza nuestro enlace oficial de reporte de seguridad:**
+
+👉 **[🛡️ Reporte de Seguridad](https://github.com/thecandylab/.github/security/advisories/new)**
+
+*Este enlace crea un advisory privado solo visible para mantenedores*
+
+### ⚠️ Por favor NO uses:
+- ❌ "Open a blank issue" 
+- ❌ Issues públicos
+- ❌ Discusiones públicas
+
+### ✅ Método Correcto:
+- ✅ **🛡️ Reporte de Seguridad** (enlace en la página de issues)
+- ✅ **Email**: security@thecandylab.com (solo como backup)
+
+
+
 **NO reportes vulnerabilidades de seguridad a través de issues públicos o discusiones.**
 
 ### 📧 Canal Privado de Reporte
