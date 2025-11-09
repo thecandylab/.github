@@ -1,0 +1,122 @@
+# .github/workflows/security-advisory-processor.yml
+name: 🛡️ Security Advisory Processor
+
+on:
+  security_advisory:
+    types: [reported, published, updated]
+
+jobs:
+  process-advisory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📨 Process New Security Advisory
+        if: github.event.action == 'reported'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const advisory = context.payload.security_advisory;
+
+            // Mapeo de severidad a tus etiquetas personalizadas
+            const severityMapping = {
+              'critical': { label: 'prio:P0', bounty: '$500-$1000' },
+              'high': { label: 'prio:P1', bounty: '$250-$500' },
+              'moderate': { label: 'prio:P2', bounty: '$100-$250' },
+              'low': { label: 'prio:P3', bounty: 'Mention + Swag' }
+            };
+
+            const severityInfo = severityMapping[advisory.severity];
+
+            // Crear issue interna de seguimiento (opcional)
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[SECURITY-TRACKING] ${advisory.summary}`,
+              body: `
+                ## 🔒 Advisory de Seguridad - Seguimiento Interno
+
+                **ID**: ${advisory.ghsa_id}
+                **Severidad**: ${advisory.severity} (${severityInfo.label})
+                **Reportado por**: ${advisory.reporter?.login || 'Anónimo'}
+                **Bounty potencial**: ${severityInfo.bounty}
+
+                ### 📋 Información del Advisory
+                - **Estado**: En investigación
+                - **Versiones afectadas**: ${advisory.vulnerabilities.map(v => v.package).join(', ')}
+                - **CVE**: ${advisory.cve_id || 'Pendiente de asignación'}
+
+                ### ⏱️ Timeline Esperado
+                - **Respuesta inicial**: ${severityInfo.response_time || '24-48h'}
+                - **Resolución estimada**: ${severityInfo.resolution_time || '1-2 semanas'}
+
+                [Ver Advisory](${advisory.html_url})
+              `,
+              labels: ['security-tracking', severityInfo.label, 'type:security']
+            });
+
+            // Enviar confirmación al reporter
+            if (advisory.reporter) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: advisory.number,
+                body: `
+                  ## 🤝 Confirmación de Recepción
+
+                  Hemos recibido tu advisory de seguridad y estamos investigando.
+
+                  **📊 Información inicial:**
+                  - Severidad: ${advisory.severity}
+                  - Bounty potencial: ${severityInfo.bounty}
+                  - Estado: En investigación
+
+                  **⏱️ Próximos pasos:**
+                  1. Evaluación técnica (24-48 horas)
+                  2. Desarrollo de parche (si es necesario)
+                  3. Coordinación de divulgación
+                  4. Actualizaciones regulares
+
+                  **📞 Contacto:** security@thecandylab.com
+
+                  ---
+                  *Respuesta automática - Equipo de Seguridad The Candy Lab*
+                `
+              });
+            }
+
+  bounty-evaluation:
+    runs-on: ubuntu-latest
+    needs: process-advisory
+    if: github.event.action == 'published'
+    steps:
+      - name: 🏆 Evaluate Bounty Eligibility
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const advisory = context.payload.security_advisory;
+
+            // Lógica de evaluación de recompensa
+            const isEligible = advisory.severity === 'critical' || advisory.severity === 'high';
+
+            if (isEligible && advisory.reporter) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: advisory.number,
+                body: `
+                  ## 🏆 Evaluación de Recompensa
+
+                  ¡Tu reporte califica para nuestro programa de recompensas!
+
+                  **💰 Bounty asignado:** ${advisory.severity === 'critical' ? '$500-$1000 USD' : '$250-$500 USD'}
+
+                  **📋 Próximos pasos:**
+                  1. Nos pondremos en contacto via email en 5-7 días
+                  2. Proceso de verificación de identidad
+                  3. Pago via método preferido
+
+                  **📧 Contacto:** security@thecandylab.com
+
+                  ¡Gracias por ayudar a mejorar nuestra seguridad!
+                `
+              });
+            }

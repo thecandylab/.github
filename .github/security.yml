@@ -1,0 +1,183 @@
+# .github/security.yml
+version: "2.0"
+organization: "thecandylab"
+security:
+  enabled: true
+  contact:
+    email: "security@thecandylab.com"
+    url: "https://github.com/thecandylab/.github/security/advisories/new"
+    pgp: "Disponible por solicitud a security@thecandylab.com"
+
+  # 🔒 Configuración de reportes
+  reporting:
+    preferred: "security_advisories"
+    allowed_formats:
+      - "security_advisories"
+      - "email"
+    instructions_url: "https://github.com/thecandylab/.github/blob/main/.github/security/INSTRUCCIONES-SEGURIDAD.md"
+
+    # 🎯 Niveles de severidad personalizados (de tu template)
+    severity_levels:
+      - level: "critical"
+        label: "🔴 P0 - Crítico"
+        description: "RCE, bypass auth, datos sensibles"
+        response_time: "24 hours"
+        resolution_time: "72 hours"
+        bounty: "$500 - $1,000 USD"
+
+      - level: "high"
+        label: "🟠 P1 - Alto"
+        description: "Escalación privilegios"
+        response_time: "48 hours"
+        resolution_time: "7 days"
+        bounty: "$250 - $500 USD"
+
+      - level: "medium"
+        label: "🟡 P2 - Medio"
+        description: "Impacto limitado"
+        response_time: "5 days"
+        resolution_time: "14 days"
+        bounty: "$100 - $250 USD"
+
+      - level: "low"
+        label: "🟢 P3 - Bajo"
+        description: "Mejora de seguridad"
+        response_time: "7 days"
+        resolution_time: "next release"
+        bounty: "Mención pública y swag"
+
+  # 📋 Campos requeridos personalizados (de tu template)
+  required_fields:
+    - name: "title"
+      description: "Título de la Vulnerabilidad"
+      placeholder: "Ej: XSS en formulario de contacto"
+      required: true
+
+    - name: "severity"
+      description: "Nivel de Severidad"
+      options: ["critical", "high", "medium", "low"]
+      required: true
+
+    - name: "affected_area"
+      description: "Área Afectada"
+      options:
+        - "frontend"
+        - "backend"
+        - "database"
+        - "infrastructure"
+        - "devops"
+        - "dependencies"
+      required: true
+
+    - name: "description"
+      description: "Descripción Detallada"
+      placeholder: "La vulnerabilidad permite... Se encuentra en... El impacto es..."
+      required: true
+
+    - name: "reproduction_steps"
+      description: "Pasos para Reproducir"
+      placeholder: "1. Ir a...\n2. Hacer click en...\n3. Introducir...\n4. Observar..."
+      required: true
+
+    - name: "impact"
+      description: "Impacto Potencial"
+      required: true
+
+  # ✅ Términos y confirmaciones (de tu template)
+  acknowledgements:
+    enabled: true
+    style: "in_release_notes"
+    required_confirmations:
+      - text: "Acepto no divulgar públicamente esta vulnerabilidad hasta que sea parcheada"
+        required: true
+      - text: "Para vulnerabilidades P0/P1, usaré Security Advisories en lugar de issues públicas"
+        required: false
+
+  # 🏆 Programa de recompensas
+  bounty:
+    enabled: true
+    url: "https://github.com/thecandylab/.github/blob/main/.github/security/INSTRUCCIONES-SEGURIDAD.md"
+    eligibility_criteria:
+      - "Primera reporte de la vulnerabilidad"
+      - "Seguimiento de esta política"
+      - "No afectar a otros usuarios durante la investigación"
+      - "Dar tiempo razonable para la resolución"
+
+  # 🛡️ Versiones soportadas
+  supported_versions:
+    policy: "active_development"
+    versions:
+      - range: ">= 1.0.0"
+        support: "full"
+        security_fixes: true
+
+      - range: "0.8.x - 0.9.x"
+        support: "security_only"
+        security_fixes: true
+
+      - range: "< 0.8.0"
+        support: "none"
+        security_fixes: false
+
+  # 🔧 Integraciones de seguridad
+  integrations:
+    code_scanning:
+      - name: "CodeQL"
+        enabled: true
+      - name: "Semgrep"
+        enabled: false
+
+    secret_scanning:
+      enabled: true
+      push_protection: true
+
+    dependabot:
+      security_updates: true
+      version_updates: true
+
+    # 🚨 Workflows automáticos para advisories
+    automations:
+      - name: "severity_assignment"
+        description: "Asigna etiquetas basadas en severidad"
+        enabled: true
+
+      - name: "initial_response"
+        description: "Envía confirmación automática en 24h"
+        enabled: true
+
+      - name: "bounty_evaluation"
+        description: "Evalúa elegibilidad para recompensa"
+        enabled: true
+
+  # 📊 Métricas y reporting
+  metrics:
+    response_time:
+      critical: "24 hours"
+      high: "48 hours"
+      medium: "5 days"
+      low: "7 days"
+
+    resolution_time:
+      critical: "72 hours"
+      high: "7 days"
+      medium: "14 days"
+      low: "next release"
+
+    reporting:
+      monthly_reports: true
+      transparency_report: true
+
+  # 🌐 Configuración multi-repositorio
+  applies_to:
+    - "thecandylab/.github"
+    - "thecandylab/*"
+  include_forks: false
+
+# 📝 Metadata de la política
+metadata:
+  version: "2.0"
+  last_updated: "2024-11-08"
+  next_review: "2025-05-08"
+  maintainers:
+    - "security-team@thecandylab.com"
+  schema: "https://docs.github.com/en/code-security/getting-started/security-configuration-files"

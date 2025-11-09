@@ -3,21 +3,29 @@
 ## 🚨 Reportar una Vulnerabilidad
 
 
+# 🛡️ Instrucciones para Reportar Vulnerabilidades
 
-**Utiliza nuestro enlace oficial de reporte de seguridad:**
+## 🔒 Proceso de Reporte
 
-👉 **[🛡️ Reporte de Seguridad](https://github.com/thecandylab/.github/security/advisories/new)**
+### Para Vulnerabilidades CRÍTICAS (P0/P1):
+👉 **[Usa Security Advisories](https://github.com/thecandylab/.github/security/advisories/new)**
 
-*Este enlace crea un advisory privado solo visible para mantenedores*
+**Qué incluye:**
+- Ejecución remota de código (RCE)
+- Bypass completo de autenticación  
+- Exposición masiva de datos sensibles
+- Toma de control del sistema
 
-### Para vulnerabilidades CRÍTICAS (P0/P1):
-👉 **[Report a security vulnerability](https://github.com/thecandylab/.github/security/advisories/new)**
+### Para Vulnerabilidades NO CRÍTICAS (P2/P3):
+👉 **Usa la plantilla "🛡️ Reporte de Seguridad"**
 
-*Crea un advisory privado solo para mantenedores*
+**Qué incluye:**
+- Problemas que requieren autenticación previa
+- Exposición de información no sensible
+- Mejoras de seguridad
+- Configuraciones no óptimas
 
-### Para vulnerabilidades MEDIAS/BAJAS (P2/P3):
-👉 **Usa la plantilla "🛡️ Reporte de Seguridad"** en la página de issues
-
+## 🏆 Programa de Recompensas
 
 ### ⚠️ Por favor NO uses:
 - ❌ "Open a blank issue" 
