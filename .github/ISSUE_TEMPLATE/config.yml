@@ -2,8 +2,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 🛡️ Reporte de Seguridad
-    url: https://github.com/thecandylab/.github/blob/main/.github/security/SECURITY.md
-    about: Reportar vulnerabilidades de forma segura y privada
+    url: https://github.com/thecandylab/.github/security/advisories/new
+    about: Para TODAS las vulnerabilidades - Sistema privado y seguro
   - name: 💬 Discusiones
     url: https://github.com/orgs/thecandylab/discussions
     about: Para preguntas generales y discusiones
