@@ -1,6 +1,9 @@
 # Configuración de las plantillas de issues
 blank_issues_enabled: false
 contact_links:
+  - name: 🛡️ Reporte de Seguridad
+    url: https://github.com/thecandylab/security/security/advisories/new
+    about: Reportar vulnerabilidades de forma segura y privada
   - name: 💬 Discusiones
     url: https://github.com/orgs/thecandylab/discussions
     about: Para preguntas generales y discusiones
